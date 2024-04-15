@@ -1,8 +1,8 @@
 const net = require('net');
 const fs = require('fs');
+const http = require('http');
 
-const PORT = 3000;
-const FILE_PATH = 'data_file_deeplearing.gz';
+const FILE_PATH = '/Users/anand/local-network-data-sharing-using-node/data_file_deeplearing.zip';
 
 const server = net.createServer((socket) => {
   console.log('Client connected');
@@ -22,6 +22,9 @@ const server = net.createServer((socket) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+const ipAddress = "192.168.31.211";
+const port = 3000;
+
+server.listen(port, ipAddress, () => {
+    console.log(`Server Listening on http://${ipAddress}:${port}`);
 });
