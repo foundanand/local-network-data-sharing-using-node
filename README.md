@@ -18,8 +18,9 @@ This project allows you to transfer files over a local network using Node.js. Th
 1. Navigate to the project directory.
 2. Install the necessary dependencies:
 
-   ```bash
-   npm install
+```bash
+npm install
+```
 
 Run the server script on the sender computer:
 ```bash
